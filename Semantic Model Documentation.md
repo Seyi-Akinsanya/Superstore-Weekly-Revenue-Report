@@ -98,10 +98,20 @@ Key highlights of the ERD:
 - **Attributes:** Customer ID, Customer Name
 - **Relationships:** Connected to **FactOrders**
 
+#### **DimOthers**
+- **Primary Key:** Unique JunkID
+- **Attributes:** Order Priority, Ship Mode
+- **Relationships:** Connected to **FactOrders**
+
 #### **DimLocation**
 - **Primary Key:** RegionID
 - **Attributes:** Market, Region
 - **Relationships:** Connected to **FactOrders, FactForecast**
+
+#### **DimAccountManager**
+- **Primary Key:** AccountManagerID
+- **Attributes:** Person, Region
+- **Relationships:** Connected to **FactOrders**
 
 #### **Date Table**
 - **Primary Key:** Date
@@ -121,12 +131,14 @@ Key highlights of the ERD:
 - **Relationships:** Used for KPI slicer interactions
 
 #### **Measures Folder**
-- **Purpose:** Organizes calculated measures for improved usability
+- **Purpose:** Organizes calculated measures in display folders for improved usability
 - **Common Measures:** Sales, AOV, Profit Margin
 
 ***
 
-## :pushpin: 5.0 Performance Optimization
+## :pushpin: 5.0 Performance Optimization & Security
+
+### :triangular_flag_on_post: 5.1 Performance Optimization
 
 1. **Star Schema Implementation**
    - Ensures **faster query performance** by reducing redundant relationships.
@@ -142,6 +154,14 @@ Key highlights of the ERD:
 
 4. **Dynamic Filtering Using Parameters**
    - Implemented **KPI selection** to allow users to switch between different metrics dynamically.
+
+5. **Junk Dimension**
+   - Implemented to make model more performant by removing important but rarely used low cardinality dimensions from the fact table.
+
+### :triangular_flag_on_post: 5.2 Security
+
+1. Row level security applied to DimAccountManager using DAX (USERPRINCIPALNAME) to limit account managers to their respective regions.
+
 
 ***
 
