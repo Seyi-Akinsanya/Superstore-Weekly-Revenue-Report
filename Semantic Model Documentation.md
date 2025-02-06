@@ -10,13 +10,17 @@ This Power BI semantic model is designed to provide sales, profitability, locati
 
 The model is structured with **fact tables** containing transactional and forecast data & **dimension tables** providing contextual information for analysis.
 
-This model is owned by Seyi Akinsanya who can be reached at akinsanyaseyi225@gmail.com for further inquiries. It is loacted in the Portfolio Projects Workspace
+This model's SPOC is Seyi Akinsanya who can be reached at akinsanyaseyi225@gmail.com for further inquiries. It is loacted in the Portfolio Projects Workspace.
+
+This model is used in the following report(s):
+
+[Superstore Weekly Revenue Report](https://app.powerbi.com/view?r=eyJrIjoiZTk0OWQwYzktODU3MC00MGE0LWIzM2UtMjI3ODVjMzlkNzZiIiwidCI6IjRiYWMzNjU3LTBhOGItNGM4Mi04YmY1LTU3MWZlMGVlZThmZSJ9&pageName=d0f7f61240debb412c3e)
 
 ***
 
-## :pushpin: 2.0 Key Business Requirements
+## :pushpin: 2.0 Key Business Requirements & User Segments
 
-The business intelligence model is designed to support the following requirements:
+The model is designed to support the following requirements:
 
 1. **Sales and Forecasting Analysis**
    - Track actual sales vs. forecasted sales.
@@ -33,6 +37,20 @@ The business intelligence model is designed to support the following requirement
 4. **Product and Category Performance**
    - Evaluate product performance across different categories.
    - Compare sales trends over time.
+     
+5. **Operational Efficiency**
+   - Compare order and ship dates across product categories and regions.
+   - Track on time delivery by ship modes and order priorities.
+
+
+The model has the following user segments:
+
+1. Commercial, Marketing and Operations Directors
+
+2. Category managers and product owners.
+
+3. Regional account managers.
+
 
 ### :triangular_flag_on_post: 2.1 Review ERD
 
@@ -42,7 +60,7 @@ The following is the **Entity-Relationship Diagram (ERD)** representing the Powe
 
 Key highlights of the ERD:
 - **FactOrders** and **FactForecast** contain the main transactional data.
-- **DimProduct, DimCategory, DimCustomer, DimLocation** provide contextual attributes.
+- **DimProduct, DimCategory, DimAccountManager DimCustomer, DimOthers, DimLocation** provide contextual attributes.
 - **Date table and Week Bridging Table** support time-based analysis.
 - **Measures Folder & KPI Selection** enable dynamic metric selection.
 
@@ -54,9 +72,9 @@ Key highlights of the ERD:
 
 #### **FactOrders**
 - **Primary Key:** Order ID
-- **Key Columns:** Product ID, Customer ID, Region ID
+- **Key Columns:** Sales (Source), Profit (Source) , Order Count
 - **Metrics:** Sales, Quantity, Profit, Discount, Shipping Cost
-- **Relationships:** Connected to **DimProduct, DimCustomer, DimLocation, Date**
+- **Relationships:** Connected to **DimProduct, DimCustomer, DimLocation, DimAccountManager, DimOthers, Date**
 
 #### **FactForecast**
 - **Primary Key:** (Composite - Week Year Number, Sub-Category, Region)
@@ -108,7 +126,7 @@ Key highlights of the ERD:
 
 ***
 
-## :pushpin: 4.0 Performance Optimization Strategies
+## :pushpin: 5.0 Performance Optimization
 
 1. **Star Schema Implementation**
    - Ensures **faster query performance** by reducing redundant relationships.
