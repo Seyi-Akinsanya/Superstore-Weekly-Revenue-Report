@@ -75,7 +75,7 @@ The business intelligence model is designed to support the following requirement
 
 The following is the **Entity-Relationship Diagram (ERD)** representing the Power BI semantic model.
 
-![ERD Placeholder - Insert Image Link Here](image_placeholder)
+![ERD Placeholder - Insert Image Link Here](Schema.jpg)
 
 Key highlights of the ERD:
 - **FactOrders** and **FactForecast** contain the main transactional data.
