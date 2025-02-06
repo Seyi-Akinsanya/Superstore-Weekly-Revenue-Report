@@ -1,43 +1,4 @@
-# :bar_chart: Power BI Semantic Model Documentation :notebook:
-
-## :clipboard: Learning Outcomes :heavy_check_mark:
-
-<details>
-<summary>
-Click here to view learning outcomes from this documentation!
-</summary>
-
-The following Power BI skills and concepts will be covered in this documentation:
-
-1. **Understanding Entity-Relationship Diagrams (ERDs)**
-   - Analyzing schema structure and table relationships.
-   - Understanding cardinality and primary/foreign keys.
-   - Using ERDs to map out data flows and dependencies.
-
-2. **Data Modeling Best Practices**
-   - Designing a star schema for optimized performance.
-   - Using dimension and fact tables efficiently.
-   - Avoiding unnecessary many-to-many relationships.
-
-3. **Fact & Dimension Table Definitions**
-   - Categorizing tables based on their roles.
-   - Understanding granularity and aggregation levels.
-   - Maintaining data integrity across relationships.
-
-4. **Time Intelligence and Date Table Implementation**
-   - Creating a date table for time-based analysis.
-   - Understanding relationships between date tables and fact tables.
-   - Implementing week-based aggregations.
-
-5. **Optimization Strategies**
-   - Indexing and data reduction techniques.
-   - Using calculated columns vs. measures.
-   - Applying performance-tuning strategies.
-
-6. **Semantic Layer and Business Logic Implementation**
-   - Creating calculated tables, columns, and measures.
-   - Utilizing KPI slicers for dynamic filtering.
-   - Structuring a Measures folder for organization.
+# :bar_chart: Superstore Revenue Semantic Model Documentation :notebook:
 
 </details>
 
