@@ -6,9 +6,11 @@
 
 ## :pushpin: 1.0 Overview
 
-This Power BI semantic model is designed for a **business intelligence solution** that integrates sales, forecast, location, and customer data for analytical reporting. The schema follows a **star schema design**, ensuring optimal performance and usability for reporting needs.
+This Power BI semantic model is designed to provide sales, profitability, location, and customer data for analytical reporting. The schema follows a **star schema design**, ensuring optimal performance and usability for reporting needs.
 
-The model is structured with **fact tables** containing transactional data and **dimension tables** providing contextual information for analysis.
+The model is structured with **fact tables** containing transactional and forecast data & **dimension tables** providing contextual information for analysis.
+
+This model is owned by Seyi Akinsanya who can be reached at akinsanyaseyi225@gmail.com for further inquiries. It is loacted in the Portfolio Projects Workspace
 
 ***
 
@@ -25,7 +27,7 @@ The business intelligence model is designed to support the following requirement
    - Segment customers based on sales patterns.
 
 3. **Market and Location Analysis**
-   - Performance analysis based on market and region.
+   - Performance analysis based on market, region and account manager.
    - Identify trends in different geographical areas.
 
 4. **Product and Category Performance**
