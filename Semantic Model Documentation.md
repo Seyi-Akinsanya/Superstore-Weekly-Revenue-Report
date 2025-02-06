@@ -20,6 +20,8 @@ This model is used in the following report(s):
 
 ## :pushpin: 2.0 Key Business Requirements & User Segments
 
+### :triangular_flag_on_post: 2.1 Key Business Requirements
+
 The model is designed to support the following requirements:
 
 1. **Sales and Forecasting Analysis**
@@ -42,6 +44,7 @@ The model is designed to support the following requirements:
    - Compare order and ship dates across product categories and regions.
    - Track on time delivery by ship modes and order priorities.
 
+### :triangular_flag_on_post: 2.2 User Segments
 
 The model has the following user segments:
 
@@ -52,7 +55,7 @@ The model has the following user segments:
 3. Regional account managers.
 
 
-### :triangular_flag_on_post: 2.1 Review ERD
+### :triangular_flag_on_post: 2.3 Review ERD
 
 The following is the **Entity-Relationship Diagram (ERD)** representing the Power BI semantic model.
 
@@ -165,15 +168,7 @@ Key highlights of the ERD:
 
 ***
 
-## :pushpin: 5.0 Conclusion
+## :pushpin: 6.0 Conclusion
 
 This Power BI semantic model is structured for **optimal reporting performance** with a **well-defined star schema**. The model supports **sales analysis, forecasting, customer segmentation, and time-based trends**.
 
-### Next Steps:
-- Implement **DAX measures** for deeper insights.
-- Create **Power BI dashboards** with drill-through and tooltip functionality.
-- Optimize report performance using **aggregations and indexing**.
-
----
-
-**Note:** Replace all `image_placeholder` references with the actual image links for documentation clarity.
