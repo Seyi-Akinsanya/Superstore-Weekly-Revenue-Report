@@ -61,6 +61,7 @@ The following is the **Entity-Relationship Diagram (ERD)** representing the Powe
 
 ![ERD Placeholder - Insert Image Link Here](Schema.jpg)
 
+```mermaid
 erDiagram
     FactOrders {
         int OrderID
@@ -179,7 +180,7 @@ erDiagram
     FactForecast ||--|| Date : "WeekYearNumber"
 
     Date ||--|| WeekBridgingTable : "WeekYearNumber"
-
+```
 
 Key highlights of the ERD:
 - **FactOrders** and **FactForecast** contain the main transactional data.
