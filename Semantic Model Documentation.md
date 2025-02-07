@@ -61,6 +61,126 @@ The following is the **Entity-Relationship Diagram (ERD)** representing the Powe
 
 ![ERD Placeholder - Insert Image Link Here](Schema.jpg)
 
+erDiagram
+    FactOrders {
+        int OrderID
+        date OrderDate
+        int Profit_Source
+        int Quantity_Source
+        int Sales_Source
+        int Discount
+        date ShipDate
+        int ShippingCost_Source
+        int OrderCount
+    }
+
+    FactForecast {
+        string Category
+        string Market
+        int Order_Count
+        int Profit
+        string Region
+        int Sales
+        string Sub_Category
+        int Week
+        int Week_Year_Number
+        int Year
+        int Order_Count_Forecast
+        int Profit_Forecast
+        int Sales_Forecast
+    }
+
+    DimProduct {
+        int ProductID_PK
+        string ProductName
+        int ProductID
+        string DimCategorySub_Category
+    }
+
+    DimCategory {
+        string Category
+        string Sub_CategoryID
+    }
+
+    DimLocation {
+        string Market
+        string Region
+        int RegionID
+    }
+
+    DimCustomer {
+        int CustomerID
+        int CustomerID_PK
+    }
+
+    DimAccountManager {
+        int AccountManagerID
+        string Person
+        string Region
+    }
+
+    DimOthers {
+        string ConcatField
+        string OrderPriority
+        string ShipMode
+        int UniqueJunkID
+    }
+
+    Date {
+        date Date
+        date DateWithTransactions
+        string DayOfWeek
+        int DayOfWeekNumber
+        string Month
+        int MonthNumber
+        string Quarter
+        int Week
+        string WeekLong
+        int WeekYearNumber
+        int Year
+    }
+
+    WeekBridgingTable {
+        int WeekYearNumber
+    }
+
+    KPISelection {
+        string KPISelectionFields
+        int KPISelectionOrder
+        string KPISelectionParameter
+    }
+
+    DateAutoTemplate {
+        date Date
+        date DateWithTransactions
+        string DayOfWeek
+        int DayOfWeekNumber
+        string Month
+        int MonthNumber
+        string Quarter
+        int Week
+        string WeekLong
+    }
+
+    MeasuresFolder {
+        int AOV
+    }
+
+    FactOrders ||--|| DimProduct : "ProductID"
+    FactOrders ||--|| DimLocation : "RegionID"
+    FactOrders ||--|| DimCustomer : "CustomerID"
+    FactOrders ||--|| DimAccountManager : "AccountManagerID"
+    FactOrders ||--|| DimOthers : "UniqueJunkID"
+    FactOrders ||--|| Date : "OrderDate"
+    
+    FactForecast ||--|| DimCategory : "Sub-CategoryID"
+    FactForecast ||--|| DimLocation : "Region"
+    FactForecast ||--|| WeekBridgingTable : "WeekYearNumber"
+    FactForecast ||--|| Date : "WeekYearNumber"
+
+    Date ||--|| WeekBridgingTable : "WeekYearNumber"
+
+
 Key highlights of the ERD:
 - **FactOrders** and **FactForecast** contain the main transactional data.
 - **DimProduct, DimCategory, DimAccountManager DimCustomer, DimOthers, DimLocation** provide contextual attributes.
