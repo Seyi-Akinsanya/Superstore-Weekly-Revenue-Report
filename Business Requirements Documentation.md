@@ -42,7 +42,7 @@ The dashboard facilitates **data-driven decision-making** by:
 
 ---
 
-## :pushpin: 3.0 Dashboard Components & Functionalities
+## :pushpin: 3.0 Dashboard Components & Functionalities using Week 26 2017 as an example
 
 ### :triangular_flag_on_post: 3.1 High-Level KPIs (Top Metrics)
 - **💰 Sales Revenue:** `$89.70K` - Total revenue for the selected reporting week.
@@ -97,7 +97,7 @@ The dashboard facilitates **data-driven decision-making** by:
 ### :triangular_flag_on_post: 4.3 User Access & Permissions
 - **Executives** – Full access to all metrics and drill-through features.
 - **Product Category Managers** – Access to **category and sub-category** data.
-- **Regional Managers** – Access to **regional sales data and market insights**.
+- **Regional Managers** – Access to **regional sales data and market insights** based on row level security.
 
 ---
 
@@ -105,7 +105,7 @@ The dashboard facilitates **data-driven decision-making** by:
 
 - All **monetary values** are in **USD**.
 - Sales forecasts are **updated quarterly**, but weekly reports **compare actual vs forecast**.
-- Drill-through capabilities are available **only for category, sub-category, and regional views**.
+- Drill-through capabilities are available **only for sub-category and regional views**.
 
 ---
 
@@ -125,7 +125,7 @@ The dashboard facilitates **data-driven decision-making** by:
 - **AOV (Average Order Value)** – Total sales revenue divided by the number of transactions.
 - **Profit Margin** – Percentage of revenue that remains after deducting costs.
 - **Forecast** – Predicted revenue performance based on business models.
-- **Five-Week Rolling Average** – Moving average of sales over the last five weeks.
+- **Five-Week Rolling Average** – Moving average of KPIs over the last five weeks.
 
 ---
 
